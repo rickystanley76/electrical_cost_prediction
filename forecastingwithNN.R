@@ -1,6 +1,7 @@
-##Project IV Script
+##Project El Cost Forecasting Script
 
 ## Import Data myelData.csv file as myelData
+##Upload the data included with in the folder
 
 
 # check the quotes while importing to get 2 columns
@@ -43,7 +44,7 @@ plot(myts)
 mynnetar <- nnetar(window(myts,end=c(2019,2), lambda="auto"))
 ##mynnetar <- nnetar(myts)
 
-# forecasting 3 years with the model
+# forecasting 1.5 years with the model
 nnetforecast <- forecast(mynnetar, h = 18,
                          PI = T)
 library(ggplot2)
